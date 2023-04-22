@@ -1,6 +1,10 @@
+"use client";
+import { BrowserRouter } from 'react-router-dom'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+
+import Logo from "../../../public/8368.jpg"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,38 +14,18 @@ function Navbar() {
   };
 
   return (
+    <BrowserRouter>
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          My Portfolio
+        <Link to="/" className="duration-150">
+          <h1 className='aqash text-lg'>	&lt;aqash !&gt;<span class="blink">_</span></h1>
         </Link>
-        <div className="menu-icon" onClick={toggleMenu}>
-          <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
-          <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={toggleMenu}>
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/projects" className="nav-links" onClick={toggleMenu}>
-              Projects
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/about" className="nav-links" onClick={toggleMenu}>
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/contact" className="nav-links" onClick={toggleMenu}>
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <Link to="/" className="nav-item">
+          <h1 className='text-lg'>	Contact</h1>
+        </Link>
       </div>
     </nav>
+    </BrowserRouter>
   );
 }
 

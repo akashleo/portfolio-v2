@@ -1,0 +1,52 @@
+.about-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.about-text{
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: medium;
+}
+
+.about-image{
+    border-radius: 50%;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 26px;
+}
+
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.125rem solid white; /* The typwriter cursor */
+    white-space: pre-wrap; /* Keeps the content on a single line */
+    margin: 0; /* Gives that scrolling effect as the typing happens */
+    text-align: center;
+    letter-spacing: .15em; /* Adjust as needed */
+    /* animation: 
+      typing 7.5s steps(40, end),
+      blink-caret .75s step-end infinite; */
+  }
+
+  .typewriter::after {
+    content: "|";
+    display: inline-block;
+    width: 0;
+    animation: typing 2s steps(40, end);
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
